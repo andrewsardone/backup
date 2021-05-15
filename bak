@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-$HOME/.backup/backup_to_jungledisk.sh >> $HOME/.backup/log/`date "+%Y-%m-%d"`.log

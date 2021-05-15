@@ -1,13 +1,20 @@
-backup
-======
+# backup
 
-Scripts to backup to an Amazon S3 bucket via [JungleDisk](http://www.jungledisk.com/).
+A set of configuration files and scripts to backup my MacBook Pro. The
+backup program of choice is [restic] and the backup destination is [Wasabi].
+Which files to backup is defined by the list within `restic.files`.
 
-Contents
---------
+## Usage
 
-* `backup_to_jungledisk.sh` - backup script
-* `bak` - wrapper script that's copied to `/usr/local/bin`
-* `rsync_exclude_home` - list of content to exclude when rsync-ing the home directory
-* `rsync_exclude_music` - list of content to exclude when rsync-ing the iTunes music files
-* `setup.sh` - execute to symlink the current directory and copy `bak` to `/usr/local/bin`
+First, install [restic]. Then, clone the repository and run `backup.sh`.
+
+### Set up atuomatic backup
+
+Install a simple cron job:
+
+```
+make install
+```
+
+[restic]: https://restic.net/
+[Wasabi]: https://wasabi.com/
